@@ -8,42 +8,41 @@
     />
     <title>Home - My first website</title>
     <link href="styles.css" rel="stylesheet" />
-    <style>
-      /* margion은 border로 부터 바깥쪽, padding은 border로 부터 안쪽
-         id는 한 요소에 하나의 id만 허용, id는 HTML과 CSS의 값이 같아야된다 */
-           html {
-             background-color: tomato;
-           }
-           body {
-             margin: :20px;
-             padding:20px;
-             background-color: thistle;
-           } /* div에 설정한 값은 모든 div에 적용 됨, id값에 추가적으로 설정을 안해도 됨 */
-           div {
-             padding:10px;
-           }/* css 설정을 위해서 id값을 불러 올때는 #을 붙이고 id 고유이름을 작성,
-              div의 id 설정, 불러와서 상세 설정 하는 과정 공부, 각각의 width값과 height값을 설정을 위해서 div값에서 삭제 후
-              각각의 id에 설정 값 입력 */
-           #first{
-             background-color:whitesmoke;
-             width:150px;
-             height:150px
-           }
-           #second{
-             background-color:teal;
-             width:100px;
-             height:100px
-           }
-           #third{
-             background-color:wheat;
-             width:50px;
-             height:50px
-           }
-           #fourth{
-             background-color:blanchedalmond;
-             width:25px;
-             height:25px
-           }
+    <style> /* border은 inline 과 block 모두 적용 */
+      *{
+        border:1px dashed black;
+      }
+      html {
+        background-color: tomato;
+      }
+      body {
+        margin: :20px;
+        padding:20px;
+        background-color: thistle;
+      } /* border 사용 하는 공부, border은 이쁜 속성이 없어서 다양하게 사용하기 보다는
+      한가지를 사용 하는 경우가 많음 */
+      div {
+        padding:10px;
+        border:2px solid black;
+      }
+      #first{
+        background-color:whitesmoke;
+        width:150px;
+        height:150px
+      }
+      #second{
+        background-color:teal;
+        width:100px;
+        height:100px
+      }
+      #third{
+        background-color:wheat;
+        width:50px;
+        height:50px
+      }
+      span{
+        border-style:dotted;
+      }
     </style>
     <meta charset="utf-8" />
     <meta name="description" content="This is my website" />
@@ -52,8 +51,7 @@
     <div id="first">
       <div id="second">
         <div id="third">
-          <div id="fourth"></div>
-        </div>
+          <span>hello</span>
       </div>
     </div>
   </body>
