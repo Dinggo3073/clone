@@ -7,52 +7,35 @@
       href="http://nomadcoders.co/m.png"
     />
     <title>Home - My first website</title>
-    <link href="styles.css" rel="stylesheet" />
-    <style> /* border은 inline 과 block 모두 적용 */
-      *{
-        border:1px dashed black;
-      }
-      html {
-        background-color: tomato;
-      }
+    <style>
+      /* inline에 관한 학습, inline은 넓이와 높이가 없다 그래서 위, 아래에 margin을 가질 수 없다
+      padding은 사방을 다 가질 수 있고, margin은 좌, 우만 가질 수 있다
+      margin을 위, 아래에 적용하고 싶다면 inline 요소들을 block으로 변경해야 됨 */
       body {
-        margin: :20px;
-        padding:20px;
-        background-color: thistle;
-      } /* border 사용 하는 공부, border은 이쁜 속성이 없어서 다양하게 사용하기 보다는
-      한가지를 사용 하는 경우가 많음 */
-      div {
-        padding:10px;
-        border:2px solid black;
+        margin: 20px;
       }
-      #first{
-        background-color:whitesmoke;
-        width:150px;
-        height:150px
+      .btn{
+        padding: 5px 10px;
+        border-radius: 5px;
       }
-      #second{
-        background-color:teal;
-        width:100px;
-        height:100px
+      .teal {
+        background-color: teal;
       }
-      #third{
-        background-color:wheat;
-        width:50px;
-        height:50px
+      .tomato {
+        background-color: tomato;
+        color: white;
       }
-      span{
-        border-style:dotted;
-      }
+      /* #tomato= id="tomato" , .tomato= class="tomato" id로 특정 설정을 하기 위해서는 고유의 id값을 설정 해줘야 하는 번거로움이 있음
+      반면 class는 유일할 필요가 없기 때문에 여러 요소를 함께 사용이 가능하다 class는 유용하게 자주 사용한다 */
     </style>
-    <meta charset="utf-8" />
-    <meta name="description" content="This is my website" />
   </head>
   <body>
-    <div id="first">
-      <div id="second">
-        <div id="third">
-          <span>hello</span>
-      </div>
-    </div>
+    <span class="btn teal">hello</span>
+    <span class="btn tomato">hello</span>
+    <span class="btn teal">hello</span>
+    <span class="btn tomato">hello</span>
+    <span class="btn teal"></span>hello</span>
+    <span class="btn tomato">hello</span>
+    <span class="btn teal">hello</span>
   </body>
 </html>
