@@ -5,29 +5,30 @@
     <style>
       body {
         height: 1000vh;
-        margin: 20px;
-      }
+        margin: 50px;
+      } /* 가장 중요한 요소로 position : relative, absolute 중요 */
       div {
         width: 300px;
         height: 300px;
-        color: white;
-        background-color: teal;
-      }
-      #second {
         background-color: wheat;
+        position: relative; /* position을 relative로 하면 top,bottom,left,right 속성 사용 가능 
+        element가 처음 위치한 곳을 기준으로 수정, element가 처음 놓인 자리에서 상하좌우로 움직임 */
       }
-      #green {
+      .green {
         background-color: teal;
-        position: fixed; /* 간혹 웹 사이트에서 사용 되던 같이 움직이는 메뉴 바를 사용하는데 쓰임 */
-        opacity: 0.2;
-      }
-      #different {
-        background-color: wheat;
-      }
+        height: 100px;
+        position: absolute; /*가장 가까운 relative를 부모로 기준으로 이동 시켜줌, 
+        body를 부모로 인식하고 움직임, 이 문제를 수정하기 위해서 div를 부모 element로 인식할 수 있게
+        position을 relative로 설정 */
+        top: -10px;
+        left: -10px;
+        width: 100px;
+      } /* position : static 레이아웃이 박스를 처음 위치하는 곳으로 두는 것 */
     </style>
   </head>
   <body>
-    <div id="green"></div>
-    <div id="different"></div>
+    <div>
+      <div class="green"></div>
+    </div>
   </body>
 </html>
