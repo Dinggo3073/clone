@@ -7,27 +7,23 @@
         height: 1000vh;
         margin: 50px;
       }
-      div {
-        width: 150px;
-        height: 150px;
-        background-color: wheat;
-        position: relative;
-      }
-      div:first-child {
+      span {
         background-color: tomato;
       }
-      div:last-of-type {
-        /* 강의에서는 last-chird로 설정 후 background-color를 설정 했는데 변화가 없어서,
-        last-of-type로 설정하니 background-color가 설정이 됨 
-        추가적으로 nth-child는 유형에 관계없이/ nth-of-type는 특정 유형만을 선택 */
+      span:nth-child(3n + 1) {
+        /* even : 짝수, odd : 홀수, n + 1 : n에 숫자를 넣어서 사용 */
         background-color: teal;
       }
     </style>
   </head>
   <body>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
+    <span>hello</span>
+    <span>hello</span>
+    <span>hello</span>
+    <span>hello</span>
+    <span>hello</span>
+    <span>hello</span>
+    <span>hello</span>
+    <span>hello</span>
   </body>
 </html>
