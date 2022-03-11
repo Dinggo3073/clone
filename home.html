@@ -6,29 +6,28 @@
       body {
         height: 1000vh;
         margin: 50px;
-      } /* 가장 중요한 요소로 position : relative, absolute 중요 */
-      div {
-        width: 300px;
-        height: 300px;
-        background-color: wheat;
-        position: relative; /* position을 relative로 하면 top,bottom,left,right 속성 사용 가능 
-        element가 처음 위치한 곳을 기준으로 수정, element가 처음 놓인 자리에서 상하좌우로 움직임 */
       }
-      .green {
+      div {
+        width: 150px;
+        height: 150px;
+        background-color: wheat;
+        position: relative;
+      }
+      div:first-child {
+        background-color: tomato;
+      }
+      div:last-of-type {
+        /* 강의에서는 last-chird로 설정 후 background-color를 설정 했는데 변화가 없어서,
+        last-of-type로 설정하니 background-color가 설정이 됨 
+        추가적으로 nth-child는 유형에 관계없이/ nth-of-type는 특정 유형만을 선택 */
         background-color: teal;
-        height: 100px;
-        position: absolute; /*가장 가까운 relative를 부모로 기준으로 이동 시켜줌, 
-        body를 부모로 인식하고 움직임, 이 문제를 수정하기 위해서 div를 부모 element로 인식할 수 있게
-        position을 relative로 설정 */
-        top: -10px;
-        left: -10px;
-        width: 100px;
-      } /* position : static 레이아웃이 박스를 처음 위치하는 곳으로 두는 것 */
+      }
     </style>
   </head>
   <body>
-    <div>
-      <div class="green"></div>
-    </div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
   </body>
 </html>
