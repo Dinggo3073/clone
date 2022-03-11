@@ -1,41 +1,33 @@
 <!DOCTYPE html>
 <html lang="kr">
   <head>
-    <link
-      rel="shortcut icon"
-      sizes="16x16 32x32 64x64"
-      href="http://nomadcoders.co/m.png"
-    />
     <title>Home - My first website</title>
     <style>
       body {
-        height: 100vh;
+        height: 1000vh;
         margin: 20px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap-reverse; /* 이 부분은 디폴트이기 때문에 바뀌지는 않지만 모든 요소를 같은 줄에 있게 만들어 줌 */
-        flex-direction: column; /* flex는 기본적으로 row로 설정이 되어 있음, 변경을 위해서 flex-direction에서 column으로 설정 */
       }
       div {
-        /* flex는 부모 엘리먼트에만 적용이 가능했지만, 여기서 div가 숫자를 갖게 되면서 flex를 가질 수 있다 */
-        display: flex;
-        justify-content: center;
-        align-items: center;
         width: 300px;
-        font-size: 28px;
-        color: white;
         height: 300px;
+        color: white;
         background-color: teal;
       }
       #second {
         background-color: wheat;
       }
+      #green {
+        background-color: teal;
+        position: fixed; /* 간혹 웹 사이트에서 사용 되던 같이 움직이는 메뉴 바를 사용하는데 쓰임 */
+        opacity: 0.2;
+      }
+      #different {
+        background-color: wheat;
+      }
     </style>
   </head>
   <body>
-    <div>1</div>
-    <div id="second">2</div>
-    <div>3</div>
+    <div id="green"></div>
+    <div id="different"></div>
   </body>
 </html>
