@@ -8,22 +8,27 @@
         margin: 50px;
       }
       span {
-        background-color: tomato;
+        background-color: yellowgreen;
+        padding: 5px;
+        border-radius: 10px;
       }
-      span:nth-child(3n + 1) {
-        /* even : 짝수, odd : 홀수, n + 1 : n에 숫자를 넣어서 사용 */
-        background-color: teal;
+      p span {
+        color: white;
       }
+      div > span {
+        /* 부모 바로 밑에 있는 자식에게 적용 시키기 위해서 ">" 사용 */
+        text-decoration: underline;
+      } /* p밑에 <span>hello</span>이 있을 경우에
+      p + span {text-decoration: underline;} 형재 span에 적용 */
     </style>
   </head>
   <body>
-    <span>hello</span>
-    <span>hello</span>
-    <span>hello</span>
-    <span>hello</span>
-    <span>hello</span>
-    <span>hello</span>
-    <span>hello</span>
-    <span>hello</span>
+    <div>
+      <span>hello</span>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod commodi et
+        sequi ipsam odio dolorem. <span>inside</span>
+      </p>
+    </div>
   </body>
 </html>
