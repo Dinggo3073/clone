@@ -12,18 +12,24 @@
         padding: 5px;
         border-radius: 10px;
       }
-      a:visited {
-       color: tomato;
+      form {
+        border: 1px solid salmon;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
       }
-      a:hover{
-        color:teal;
-      }
-      a:focus{
-        color:turquoise;
+      form:focus-within {
+        /* focus-within은 focused인 자식을 가진 부모 element에 적용
+         연계하여 사용도 가능 ex)form:hover input:focus 이렇게 연계도 가능함 */
+        border-color: seagreen;
       }
     </style>
   </head>
   <body>
-  <a href="http://www.naver.com"/>Go to NAVER</a>
+    <form>
+      <input type="text" name="" id="" />
+      <input type="text" name="" id="" />
+      <input type="text" name="" id="" />
+    </form>
   </body>
 </html>
